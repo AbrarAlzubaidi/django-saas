@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
+    <style>
+        table, th, td {
+  border:1px solid black;
+}
+    </style>
 </head>
 <body>
     <h1>Visits for all pages</h1>
-    {% for visit in queryset %}
-    <p>{{visit}}</p>
-    {% endfor %}
+    <h3> total visits per page</h3>
+    <table>
+        <tr>
+            <th>page</th>
+            <th>number of visits</th>
+        </tr>
+        <tr>
+            <td>{{page}}</td>
+            <td>{{total_visit_per_page}}</td>
+        </tr>
+    </table>
     
 </body>
 </html>
