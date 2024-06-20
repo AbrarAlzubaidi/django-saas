@@ -1,4 +1,7 @@
 # Created by https://www.gitignore.io
+# ignore local static files
+src/local-cdn
+src/staticfiles/vendor
 
 ### OSX ###
 .DS_Store
