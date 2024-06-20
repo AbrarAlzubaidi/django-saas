@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-    <style>
-        table, th, td {
-  border:1px solid black;
-}
-    </style>
-</head>
-<body>
-    <h1>Visits for all pages</h1>
-    <h3> total visits per page</h3>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+visits
+{% endblock %}
+
+{% block content %} 
+    <h1> total visits per page</h1>
+    <p>total pages {{queryset}}</p>
     <table>
         <tr>
             <th>page</th>
@@ -23,6 +17,5 @@
             <td>{{total_visit_per_page}}</td>
         </tr>
     </table>
+{% endblock %}
     
-</body>
-</html>

@@ -5,7 +5,7 @@ def all_visits(request):
     path = request.path
     Visit.objects.create(path=path)
     context = {
-        "queryset": Visit.objects.all(),
+        "queryset": Visit.objects.all().count(),
         "title": "Visits List",
         "page": path,
         "total_visit_per_page": Visit.objects.filter(path=path).count()
